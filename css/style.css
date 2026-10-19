@@ -174,7 +174,7 @@ img { max-width: 100%; display: block; }
 
 .nav__actions { display: flex; align-items: center; gap: 10px; }
 
-.burger { display: none; background: none; border: 0; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
+  .burger { display: none; background: none; border: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 8px; min-width: 44px; min-height: 44px; }
 .burger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
 .burger.is-open span:first-child { transform: translateY(3.5px) rotate(45deg); }
 .burger.is-open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
@@ -400,7 +400,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 1000px) {
   .video-card--landscape { grid-column: span 4; }
-  .video-card--portrait { grid-column: span 4; aspect-ratio: 9 / 16; max-width: 360px; justify-self: center; }
+  .video-card--portrait { grid-column: span 4; aspect-ratio: 9 / 16; width: 100%; max-width: 360px; justify-self: center; }
 }
 @media (max-width: 700px) {
   .video-card--portrait { max-width: 300px; }
@@ -528,7 +528,7 @@ img { max-width: 100%; display: block; }
   .about, .contact { grid-template-columns: 1fr; gap: 44px; }
   .footer__inner { grid-template-columns: 1fr; }
 }
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .burger { display: flex; }
   .nav__links {
     position: fixed; inset: 74px 0 auto 0; flex-direction: column; gap: 4px; padding: 18px 24px 26px;
@@ -537,7 +537,10 @@ img { max-width: 100%; display: block; }
   }
   .nav__links.is-open { transform: none; }
   .nav__links a { padding: 12px 16px; }
+}
+@media (max-width: 700px) {
   .section { padding: 76px 0; }
+  .hero h1 { line-height: 1.14; }
   .skills { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .hero__stats { gap: 26px; }
@@ -562,6 +565,9 @@ img { max-width: 100%; display: block; }
   .services-feature__title { font-size: 1.5rem; }
   .services-feature__text { font-size: 0.98rem; }
   .services-feature__chips li { font-size: 0.68rem; padding: 6px 10px; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .contact__list a { display: inline-block; padding: 7px 0; }
+  .footer__social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; }
 }
 
 /* ---------- Floating WhatsApp button ---------- */
